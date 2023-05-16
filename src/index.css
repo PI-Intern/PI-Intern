@@ -1,13 +1,204 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Quicksand:wght@500&family=Roboto:wght@300&display=swap");
+
+.App {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content{
+    background: -o-linear-gradient(
+      30deg,
+      rgba(84, 58, 183, 1) 0%,
+      rgba(0, 172, 193, 1) 100%
+    );
+  background: linear-gradient(
+    60deg,
+    rgb(87, 66, 168) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  min-height: 90vh;
+}
+
+.navbar {
+  margin: auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  max-width: 85%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.navbar.active{
+  background: purple;
+  color: white;
+  max-width: 100%;
+  padding: 25px 115px 20px;
+}
+
+.navbar .nav-links {
+  display: inline-flex;
+}
+
+.navbar .nav-links li {
+  list-style: none;
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.navbar .nav-links:last-child{
+  margin-right: -30px;
+}
+
+.navbar .nav-links li a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Home */
+h1 {
+  font-family: Quicksand, "Segoe UI", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+}
+
+p {
+  font-family: Quicksand, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.flex button{
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color:rgb(84, 84, 84);
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px;
+  padding: 15px 25px;
+  outline: none;
+}
+
+.flex button:hover{
+  background: linear-gradient(
+    60deg,
+    rgb(81, 52, 153) 0%,
+    rgb(21, 162, 180) 100%
+  );
+  color: white;
+}
+
+
+/* waves */
+.waves{
+  /* margin-top: -50px; */
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  margin-bottom: -7px;
+  min-height: 100px;  
+  max-height: 160px;
+}
+
+.parallax > use {
+    -webkit-animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+            animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+    -webkit-animation-duration: 7s;
+            animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    -webkit-animation-delay: -3s;
+            animation-delay: -3s;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+    -webkit-animation-duration: 13s;
+            animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    -webkit-animation-delay: -5s;
+            animation-delay: -5s;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+}
+
+@-webkit-keyframes moveForever {
+    0% {
+        -webkit-transform: translate3d(-90px, 0, 0);
+                transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(85px, 0, 0);
+                transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes moveForever {
+    0% {
+        -webkit-transform: translate3d(-90px, 0, 0);
+                transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(85px, 0, 0);
+                transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width : 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .content {
+        height: 30vh;
+    }
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
 }
